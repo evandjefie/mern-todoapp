@@ -1,0 +1,82 @@
+/* UserInfo style */
+.UserInfo{
+    margin-top: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+
+.UserInfo > .container{
+    width: 40vw;
+    background-color: white;
+    padding: 1%;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+
+.left{
+    flex: 1;
+    padding: 5px;
+}
+
+.left>img{
+    width: auto;
+    height: 176px;
+    border-radius: 12px;
+}
+
+.right{
+    flex: 2;
+}
+
+.UserMail{
+    display: flex;
+    flex-flow: row;
+    margin-top: 5px;
+}
+
+.UserPhone{
+    display: flex;
+    flex-flow: row;
+    margin-top: 5px;
+}
+
+.UserLieu{
+    display: flex;
+    flex-flow: row;
+    margin-top: 5px;
+}
+
+.UserIcons{
+    display: flex;
+    margin-top: 5px;    
+}
+
+.UserIcons>span{
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.UserIcons>:nth-child(1){
+    background-color: rgb(195, 8, 55);
+}
+
+.UserIcons>:nth-child(2){
+    background-color: skyblue;
+}
+
+.UserIcons>:nth-child(3){
+    background-color: rgb(20, 201, 20);
+}
+
+.UserIcons>:nth-child(4){
+    background-color: rgb(254, 235, 135);
+}
