@@ -22,7 +22,7 @@ function UserInfo() {
           {/* <img src={"../../assets/img/profil1.jpeg"} alt="userlogo" /> */}
         </div>
         <div className="p-3">
-          <h1 className="flex justify-center mt-2 text-2xl text-indigo-400 font-semibold">
+          <h1 className="flex justify-center mt-2 text-2xl text-blue-400 font-semibold">
             DJEFIE EVAN
           </h1>
           <div className="flex mt-2 text-lg leading-tight font-medium text-black hover:underline">
