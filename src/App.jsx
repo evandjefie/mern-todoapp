@@ -13,8 +13,8 @@ const App = () => {
       <TopBar />
       <UserInfo />
       <Dictaphone />
-      <FloatingBtn />
       <DataTable/>
+      <FloatingBtn />
     </div>
   );
 };
