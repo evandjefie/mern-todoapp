@@ -22,7 +22,7 @@ const Dictaphone = () => {
   const pages = ["* acheter *","* ticket *","événement","* match *","accueil","* acheter un ticket du match"];
 
   if (!browserSupportsSpeechRecognition) {
-    return <span>Browser doesn't support speech recognition.</span>;
+    return <span>Le navigateur ne supporte pas speech recognition.</span>;
   }
 
 
@@ -44,7 +44,7 @@ const Dictaphone = () => {
   };
 
   return (
-    <div className='relative top-20 my-5  flex justify-evenly'>
+    <div className='relative top-20 py-5 flex justify-evenly'>
       <div className='p-3 h-16 bg-white rounded-xl flex justify-evenly'>
         <input className='flex-2 bg-gray-200 rounded-xl' type="text" value={query} onChange={(e) => setQuery(e.target.value)}/>
         <button className='flex content-center flex-1 w-auto p-2 ml-1 text-white bg-yellow-300 rounded-2xl' onClick={handleListen}>
