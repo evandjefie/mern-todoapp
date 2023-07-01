@@ -11,7 +11,7 @@ function Home() {
       <UserInfo />
       <Dictaphone />
       <DataTable/>
-      <FloatingBtn />      
+      <FloatingBtn />  
     </div>
   )
 }

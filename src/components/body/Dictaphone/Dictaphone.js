@@ -47,7 +47,7 @@ const Dictaphone = () => {
     <div className='relative top-20 py-5 flex justify-evenly'>
       <div className='p-3 h-16 bg-white rounded-xl flex justify-evenly'>
         <input className='flex-2 bg-gray-200 rounded-xl' type="text" value={query} onChange={(e) => setQuery(e.target.value)}/>
-        <button className='flex content-center flex-1 w-auto p-2 ml-1 text-white bg-yellow-300 rounded-2xl' onClick={handleListen}>
+        <button className='flex content-center flex-1 w-auto p-2 ml-1 text-white bg-blue-600 rounded-2xl' onClick={handleListen}>
           <span className='flex-1'>
           {listening ? <MicIcon/> : <MicNoneIcon/> }
           </span>
