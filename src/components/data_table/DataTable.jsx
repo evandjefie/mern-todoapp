@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+
 
 function DataTable() {
     const data = [
@@ -18,9 +19,21 @@ function DataTable() {
             dt:"01/05/2023",
             title: "Sport",
             desc: "zmmmmz",
-        },
-
+        }
     ]
+
+    const [Data, SetData] = useState([{}])
+    useEffect(()=>{
+        fetch("/api").then(
+            response => Response.json()
+        ).then(
+            data => {
+                SetData(data)
+            }
+        )
+    })
+
+    // console.log()
   return (
     <div className="py-4 px-8 overflow-x-auto table-fixed npmshadow-md sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 tab">
@@ -45,29 +58,33 @@ function DataTable() {
             </thead>
             <tbody>
                 {
-                data.map((d)=>(
-                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        {d.dt}
-                    </th>
-                    <td className="px-6 py-4">
-                        {d.title}
-                    </td>
-                    <td className="px-6 py-4">
-                        {d.desc}
-                    </td>
-                    <td className="px-6 py-4 text-right">
-                        <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                          <EditIcon/>
-                        </a>
-                    </td>
-                    <td className="px-6 py-4 text-right">
-                      <a href="#" className="font-medium text-red-600 dark:text-red-500 hover:underline">
-                        <DeleteIcon/>
-                      </a>
-                    </td>
-                </tr>                
-                ))
+                    (typeof Data.todos == "undefined") ? (
+                        <p>Chargement...</p>
+                    ):(
+                        Data.todos.map((i,d)=>(
+                        <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <th id={i} scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                {d}
+                            </th>
+                            <td id={i} className="px-6 py-4">
+                                {d}
+                            </td>
+                            <td id={i} className="px-6 py-4">
+                                {d}
+                            </td>
+                            <td className="px-6 py-4 text-right">
+                                <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                <EditIcon/>
+                                </a>
+                            </td>
+                            <td className="px-6 py-4 text-right">
+                            <a href="#" className="font-medium text-red-600 dark:text-red-500 hover:underline">
+                                <DeleteIcon/>
+                            </a>
+                            </td>
+                        </tr>                
+                        ))
+                    )
                 }
             </tbody>
         </table>

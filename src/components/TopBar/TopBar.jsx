@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {Link} from 'react-router-dom';
-import Applogo from "../assets/img/logo_todovoice.png";
+import Applogo from "../../assets/img/logo_todovoice.png";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const TopBar = () => {

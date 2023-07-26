@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/img/profil1.jpeg";
+import Logo from "../../../assets/img/profil1.jpeg";
 import "./UserInfo.css";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
