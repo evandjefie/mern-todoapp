@@ -33,9 +33,13 @@ function DataTable() {
         )
     })
 
-    // console.log()
   return (
-    <div className="py-4 px-8 overflow-x-auto table-fixed npmshadow-md sm:rounded-lg">
+    <div className="relative top-20 py-5 px-8 overflow-x-auto table-fixed npmshadow-md sm:rounded-lg">
+    { 
+        data.length === 0 ? (
+            <p></p>
+        ):(
+    
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 tab">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
@@ -88,6 +92,8 @@ function DataTable() {
                 }
             </tbody>
         </table>
+        )
+    }
     </div>
   )
 }
